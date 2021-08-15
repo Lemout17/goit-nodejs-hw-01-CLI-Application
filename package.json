@@ -1,0 +1,28 @@
+{
+  "name": "goit-nodejs-hw-01-cli-application",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "start:dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lemout17/goit-nodejs-hw-01-CLI-Application.git"
+  },
+  "author": "Vladyslav Safin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lemout17/goit-nodejs-hw-01-CLI-Application/issues"
+  },
+  "homepage": "https://github.com/Lemout17/goit-nodejs-hw-01-CLI-Application#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "commander": "^8.1.0",
+    "uuid": "^8.3.2"
+  }
+}
