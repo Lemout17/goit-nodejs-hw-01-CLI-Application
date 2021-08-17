@@ -22,13 +22,13 @@ function invokeAction({ action, id, name, email, phone }) {
       break
 
     case "get":
-      contacts.getContactById(id).then(console.log).catch(console.log)
+      contacts.getContactById(id).then(console.table).catch(console.log)
       break
 
     case "add":
       contacts
         .addContact(name, email, phone)
-        .then(console.log)
+        .then(console.table)
         .catch(console.log)
       break
 

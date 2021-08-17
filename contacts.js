@@ -1,6 +1,5 @@
 const fs = require("fs/promises")
 const path = require("path")
-const { v4 } = require("uuid")
 
 const contactsPath = path.join(__dirname, "db/contacts.json")
 
@@ -22,7 +21,7 @@ async function getContactById(contactId) {
     )
 
     if (!selectContact) {
-      throw new Error(`Contact with id=${contactId} not found`)
+      throw new Error(`Contact with id = ${contactId} not found`)
     }
 
     return selectContact
@@ -39,7 +38,7 @@ async function removeContact(contactId) {
     )
 
     if (contactsIndex === -1) {
-      throw new Error(`Contact with id=${contactId} not found`)
+      throw new Error(`Contact with id = ${contactId} not found`)
     }
 
     const removedContact = await contactsList.splice(contactsIndex, 1)
@@ -54,7 +53,12 @@ async function removeContact(contactId) {
 async function addContact(name, email, phone) {
   try {
     const contactsList = await listContacts()
-    const addNewContact = { id: v4(), name, email, phone }
+    const addNewContact = {
+      id: Math.floor(Math.random() * 1000000),
+      name,
+      email,
+      phone,
+    }
 
     contactsList.push(addNewContact)
 
