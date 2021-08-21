@@ -53,8 +53,12 @@ async function removeContact(contactId) {
 async function addContact(name, email, phone) {
   try {
     const contactsList = await listContacts()
+
+    const checkId = (id) =>
+      contactsList.some((item) => item.id === id) ? checkId(id + 1) : id
+
     const addNewContact = {
-      id: Math.floor(Math.random() * 1000000),
+      id: checkId(contactsList.length),
       name,
       email,
       phone,
