@@ -54,11 +54,16 @@ async function addContact(name, email, phone) {
   try {
     const contactsList = await listContacts()
 
-    const checkId = (id) =>
-      contactsList.some((item) => item.id === id) ? checkId(id + 1) : id
+    //альтернативный способ
+    // const checkId = (id) =>
+    //   contactsList.some((item) => item.id === id) ? checkId(id + 1) : id
+
+    function getNextUniqId(arr) {
+      return Math.max(...arr.map((contact) => contact.id)) + 1
+    }
 
     const addNewContact = {
-      id: checkId(contactsList.length),
+      id: getNextUniqId(contactsList),
       name,
       email,
       phone,
