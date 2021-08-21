@@ -5,6 +5,6 @@ https://prnt.sc/1q703jt
 <h3>Получаем контакт по id</h3>
 https://prnt.sc/1q70749
 <h3>Добавляем контакт</h3>
-https://prnt.sc/1q708da
+https://prnt.sc/1qdxcx2
 <h3>Удаляем контакт</h3>
 https://prnt.sc/1q709ez
